@@ -24,7 +24,7 @@ const Pagination = () => {
   return (
     <ul onClick={handlePaginationClick} className="pages">
       {Array(pagesCount).fill().map((_, index) => (
-        <li>
+        <li key={index}>
           <button data-id={index+1} key={index}>{index + 1}</button>
         </li>
       ))}

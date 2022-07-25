@@ -1,6 +1,4 @@
-import footer from "../../assets/img/footer.png"
 import footerLogo from "../../assets/img/footer-logo.png"
-
 import "./footer.scss"
 
 const Footer = () => {
@@ -43,6 +41,6 @@ const Footer = () => {
 
     </div>
   )
-}
+};
 
 export default Footer;
