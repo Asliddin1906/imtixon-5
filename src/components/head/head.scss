@@ -1,15 +1,12 @@
-.head-box {
-  display: flex; 
+.head {
+  width: 100%;
+  display: flex;
   justify-content: space-between;
   margin-top: 2%;
+  text-align: center;
 }
-
-.nav{
+.dropdown{
   margin-top: 20px;
-
-  display: flex;
-  justify-content: space-around;
-  align-items:center;
 }
 .nav__item {
 margin-right: 15px;
@@ -17,20 +14,7 @@ margin-right: 15px;
 }
 
 
-.filter {
-  display: flex;
-  margin-left: 50px;
-  // margin: auto 0;
-  
-}
-.filter-inp {
-  height: 50%;
-}
-.inp-icon {
-  display: block;
-  background-color: #FFBA9D;
-  // padding: 2%;
-}
+
 
 .dropbtn {
   border: 0px ;
@@ -40,27 +24,22 @@ margin-right: 15px;
   display: none;
 }
 .close-btn  {
-display: none;}
+display: none;
+}
 
 
 
 
-@media (max-width:970px) {
-  .head-box {
-    // display: block;
-    text-align: center;
-  }
-  .nav {
-    display: block;
-
-  }
-  .filter {
-    margin-left: 0;
-  }
+@media (max-width:1050px) { 
+.head {
+  display: block;
+}
+.dropdown {
+  margin-left: 90%;
+  margin-top: -57%;
+}
 .dropbtn {
   background: #f4f4f4;
-  margin-left:auto ;
-  margin-top: 20px;
   visibility: visible;
   color: white;
   border: none;
@@ -111,7 +90,3 @@ display: none;}
 
 
 
-@media (max-width: 550px) {
-
-  
-}

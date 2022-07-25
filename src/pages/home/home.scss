@@ -1,0 +1,35 @@
+.body{
+  margin-top: 5%;
+  display: flex;
+}
+.head {
+  display: flex;
+  align-items: center;
+}
+.filter {
+
+  margin-top: 50px;
+}
+.suggestion {
+  width: 35%;
+  margin-right:5%;
+}
+.paginatiomn{
+  display: flex;
+}
+
+
+@media (max-width:1050px) {
+  .body {
+    display: flex;
+    flex-direction: column-reverse;
+  }  
+  .head {
+    display: block;
+  }
+  
+  .suggestion {
+    width: auto;
+  }
+}
+

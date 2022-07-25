@@ -13,7 +13,7 @@ const Error = () => {
     <p className="error__title">Page not found - 404</p>
     <article>This page not found (deleted or never exists).</article>
     <article className="error__text">Try a phrase in search box or back to home and start again.</article>
-    <Link to={"/" + (token ? "" : "login")}> TAKE ME HOME{token ? "Home" : ">"}</Link>
+    <Link to={"/" + (token ? "" : "login")}> TAKE ME HOME{token ? ">" : ">"}</Link>
     </div>
   )
 }

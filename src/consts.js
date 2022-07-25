@@ -1,1 +1,1 @@
-export const types = ["UX", "UI"];
+export const types = ["UX", "UI", "Design", "Theropy", "Typography"];
