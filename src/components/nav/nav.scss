@@ -1,6 +1,3 @@
-.head {
-  display: flex;
-}
   .nav__hamburger {
     display: none;
   }
@@ -45,6 +42,17 @@
       text-decoration: underline;
     }
   
+    @media only screen and (max-width: 450px) {
+      .nav__hamburger {
+        margin-left: 10%;
+      }
+    }
+
+    @media only screen and (max-width: 850px) {
+      .nav__hamburger {
+        margin-left: 30%;
+      }
+    }
 
 
 @media only screen and (max-width: 1050px) {
@@ -54,8 +62,8 @@
 
     .nav__hamburger {
       display: block;
-      margin-left: 90%;
-      margin-top: -40px;
+      margin-left: 30%;
+      margin-top: 20px;
     }
 
     .nav__list {

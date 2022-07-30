@@ -26,6 +26,9 @@
 .suggestion {
   width: auto;
 }
+.filter {
+  margin-right: 10%;
+}
 }
 
 @media (max-width:1050px) {
@@ -34,7 +37,9 @@
     display: block;
   }
   .filter {
-    margin-top: 30px;
+    margin-top: 80px ;
+    margin-left: -30%;
+    // margin-top: 30px;
   }
 }
 
