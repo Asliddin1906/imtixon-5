@@ -1,4 +1,4 @@
-import { useContext, useRef } from "react";
+import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import Card from "../../components/card/card";
 import { CardsContext } from "../../contexts/cards";
@@ -6,49 +6,42 @@ import Head from "../../components/head/head"
 import Likes from "../../components/likes/likes";
 import Footer from "../footer/footer"
 import bodyImg from "../../assets/img/body-img.png"
+import SingleCards from "../../components/single-card/single-card";
+import Filter from "../../components/filter/filter"
 
 import "./single-card.scss"
+import Container from "../../components/container/container";
 const  SingleCard = () => {
   const { id } = useParams();
-  const { cards, setCards } = useContext(CardsContext);
+  const { cards } = useContext(CardsContext);
 
   const currentCard = cards?.find(card => card.id === +id);
-  const titleRef = useRef();
 
   if (!currentCard) {
     return <h1>Hech narsa yo'q</h1>
   }
   
 
-  const handleFormSubmit = (evt) => {
-    evt.preventDefault();
 
-    const editingItemIndex = cards.findIndex(card => card.id === currentCard.id);
-    const newCard = [
-      ...cards.slice(0, editingItemIndex),
-      {
-        ...currentCard,
-        title: titleRef.current.value
-      },
-      ...cards.slice(editingItemIndex + 1)
-    ];
-
-    setCards(newCard);
-  }
 
   return (
     
     <main>
+      <Container>
+
+      <div className="head">
       <Head/>
+      <Filter/>
+      </div>
       <div className="singleCard">
         <Likes className="likes"/>
         <div className="singleCard-body">
-          <Card card={currentCard} />
-          <form onSubmit={handleFormSubmit}>
+          <SingleCards card={currentCard} />
+          {/* <form onSubmit={handleFormSubmit}>
             <p>Edit title:</p>
             <input ref={titleRef} defaultValue={currentCard.title} type="text" className="editInp" />
             <button className="editBtn">Submit</button>
-          </form>
+          </form> */}
           <img src={bodyImg} alt="" className="singPageImg" />
           <article>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mollis sagittis sem ac porta. Sed commodo ligula vitae mollis tristique. Maecenas egestas semper mauris. Duis tempus blandit ultrices. Proin elit nulla, viverra id suscipit quis, tristique a dolor. Sed dapibus, orci ac luctus tincidunt, massa erat porttitor odio, non imperdiet dui risus et elit.</article>
           <p className="infoTitle">Infomation overload</p>
@@ -65,6 +58,8 @@ const  SingleCard = () => {
 
         </div>
       </div>
+        
+      </Container>
       <Footer/>
     </main>
   )

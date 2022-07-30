@@ -18,10 +18,18 @@ const Suggestion = () => {
       <img src={right} alt="" className="suggestion-link__vector"/>
       </section>
       <div className="connections">
-        <img src={facebook} alt="" className="suggestion-img"/>
-        <img src={catLogo} alt=""  className="suggestion-img"/>
+        <a href="https://m.facebook.com/" className="suggestion-img">
+        <img src={facebook} alt="" />
+        </a>
+        <a href="/" className="suggestion-img">
+        <img src={catLogo} alt="" />
+        </a>
+        <a href="https://twitter.com/" className="suggestion-img">
         <img src={twitter} alt=""  className="suggestion-img"/>
-        <img src={inLogo} alt=""  className="suggestion-img"/>
+        </a>
+        <a href="https://instagram.com/" className="suggestion-img">
+        <img src={inLogo} alt=""  />
+        </a>
       </div>
     </div>
   )

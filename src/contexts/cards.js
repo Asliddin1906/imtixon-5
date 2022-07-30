@@ -7,7 +7,7 @@ export const CardsContext = createContext();
 
 
 const CardsProvider = (props) => {
-  const [ cards , setCards] = useState();
+  const [ cards, setCards] = useState();
   const [filteredCards, setFilteredCards] = useState();
   const [ loading, setLoading ] = useState(false);
   const [activePageNumber, setActivePageNumber] = useState(1)
@@ -26,7 +26,7 @@ const CardsProvider = (props) => {
           return {
             ...card,
             likes: getRndInteger(0, 100),
-            date: new Date(`${getRndInteger(2001, 2023)}-${getRndInteger(1, 12)}-${getRndInteger(1, 28)}`).toString(),
+            date: new Date(`${getRndInteger(2001, 2023)}-${getRndInteger(1, 12)}-${getRndInteger(1, 28)}`).toDateString(),
             minutes: (`${(getRndInteger(1,10))} ${"minutes read"}`).toString(),
             type: types[getRndInteger(0, 5)],
           }

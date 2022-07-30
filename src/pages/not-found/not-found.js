@@ -9,7 +9,7 @@ const NotFound = () => {
   return (
     <Container>
       <div className="head">
-    <Head/>
+        <Head/>
       </div>
     <Error/>
     </Container>

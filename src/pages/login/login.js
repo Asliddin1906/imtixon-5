@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "./login.scss"
 
 import logo from "../../assets/img/logo.png"
+import Container from "../../components/container/container";
 
 const Login = () => {
   const { setToken } = useContext(AuthContext)
@@ -56,6 +57,8 @@ const Login = () => {
 
   return (
     <>
+    <Container>
+
     <img src={logo} alt="" className="login-img"/>
     <form onSubmit={handleFormSubmit} className="login-form"> 
       <p className="login__title">Login</p>
@@ -69,6 +72,7 @@ const Login = () => {
       <p>Password: cityslicka</p>
 
     </form>
+    </Container>
 
     </>
   )
